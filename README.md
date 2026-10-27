@@ -2,9 +2,11 @@
 
 Unity 6 URP içinde, oyuncu bağlamına göre diyalog ve görev üreten bir prototip. TÜBİTAK 2209-A kapsamında planlanan bitirme projesinin yazılım iskeletidir.
 
+Başvuru taslağı: [`docs/2209-A_Arastirma_Onerisi.md`](docs/2209-A_Arastirma_Onerisi.md).
+
 LLM çıktısı bir öneridir. Oyun durumunu değiştiren son karar, doğrulama katmanındadır. Geçersiz JSON, izinsiz eylem veya API kesintisi oyun durumunu değiştirmez; sistem yedek diyaloğa geçer.
 
-İlk dikey dilim: tek köy bölgesi, en az bir NPC, dinamik diyalog ve bir görev zinciri. PC üzerinde ölçüm hedeflenir. Akıcılık hedefi, istek sırasında 60 FPS (kare süresi 16,7 ms) civarını korumaktır. Gecikme için literatür referansı, p95 yanıt süresinde 4 saniyedir.
+İlk dikey dilim: tek köy bölgesi, en az bir NPC, dinamik diyalog ve bir görev zinciri. PC üzerinde ölçüm hedeflenir. Akıcılık hedefi, istek sürerken kare süresi p95 değerinin istek yokken ölçülen p95 değerinin 1,5 katını aşmamasıdır. Gecikme için literatür referansı, p95 yanıt süresinde 4 saniyedir ve betimsel olarak raporlanır.
 
 ## Mimari
 
