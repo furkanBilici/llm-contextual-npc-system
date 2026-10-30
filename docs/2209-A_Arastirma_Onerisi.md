@@ -2,11 +2,11 @@
 
 ## A. GENEL BİLGİLER
 
-Başvuru Sahibinin Adı Soyadı: Muhammet Furkan Bilici
+Başvuru Sahibinin Adı Soyadı: Muhammet Furkan BİLİCİ
 
 Araştırma Önerisinin Başlığı: Büyük Dil Modeli Destekli Oyuncu Olmayan Karakter (Non-Player Character, NPC) Eylemlerinin Oyun Kurallarına Göre Doğrulanması
 
-Danışmanın Adı Soyadı: Arş. Gör. Dr. Hakan Aydın
+Danışmanın Adı Soyadı: Arş. Gör. Dr. Hakan AYDIN
 
 Araştırmanın Yürütüleceği Kurum/Kuruluş: Karadeniz Teknik Üniversitesi
 
@@ -273,7 +273,7 @@ Birim fiyatlar, seçilecek model ve sağlayıcının başvuru öncesindeki günc
 | Fiyat, kur ve yeniden koşu payı | İki kalemin %20’si | — | 2.000 |
 | Toplam | — | — | 12.000 |
 
-**Üretken yapay zekâ (ÜYZ) kullanım beyanı.** Bu önerinin hazırlanmasında iki üretken yapay zekâ aracından yararlanılmıştır: Cursor üzerinden xAI’nin Grok 4.7 modeli, proje tabanının (Unity proje iskeleti ve yazılım sözleşmeleri) ve önerinin ilk yazımı dahil başlangıç belgelerinin hazırlanmasında; Anthropic’in Claude Sonnet 5.5 modeli (Claude Code aracılığıyla) ise 22 Ekim 2026 tarihli sürümde danışman geri bildirimine göre hipotezlerin, yöntemin ve bütçenin yeniden kurulmasında, metnin yazılıp düzenlenmesinde, tablo ve şekillerin hazırlanmasında ve çağrı metinleriyle karşılaştırılmasında kullanılmıştır. Aynı model 30 Ekim 2026 tarihli sürümde Cursor üzerinden, kaynakların DOI ve URL doğrulamasında, 2026 çağrısının başvuru içeriği bilgi notuna uygunluk denetiminde ve metin düzeltmelerinde kullanılmıştır. Kullanım, TÜBİTAK’ın “Destek Süreçlerinde Üretken Yapay Zekânın (ÜYZ) Sorumlu ve Güvenilir Kullanımı Rehberi” çerçevesinde beyan edilmektedir; içeriğin doğruluğundan ve özgünlüğünden proje yürütücüsü ile akademik danışman sorumludur.
+**Üretken yapay zekâ (ÜYZ) kullanım beyanı.** Bu önerinin hazırlanmasında üç üretken yapay zekâ modelinden yararlanılmıştır: Cursor üzerinden xAI’nin Grok 4.7 modeli, proje tabanının (Unity proje iskeleti ve yazılım sözleşmeleri) ve önerinin ilk yazımı dahil başlangıç belgelerinin hazırlanmasında; Anthropic’in Claude Sonnet 5.5 modeli (Claude Code aracılığıyla) ise 22 Ekim 2026 tarihli sürümde danışman geri bildirimine göre hipotezlerin, yöntemin ve bütçenin yeniden kurulmasında, metnin yazılıp düzenlenmesinde, tablo ve şekillerin hazırlanmasında ve çağrı metinleriyle karşılaştırılmasında kullanılmıştır. Aynı model 30 Ekim 2026 tarihli sürümde Cursor üzerinden, kaynakların DOI ve URL doğrulamasında, 2026 çağrısının başvuru içeriği bilgi notuna uygunluk denetiminde ve metin düzeltmelerinde kullanılmıştır. Anthropic’in Claude Opus 5.5 modeli (Claude Code aracılığıyla) de 30 Ekim 2026’da belgenin içerik tutarlılığı, atıf doğruluğu ve biçim açısından gözden geçirilmesinde, biçim düzeltmelerinde (üst bilgi, tablo yazı boyutu ve başlık numaralandırması) ve Şekil 1’e önbellek isabeti okunun eklenmesinde kullanılmıştır. Kullanım, TÜBİTAK’ın “Destek Süreçlerinde Üretken Yapay Zekânın (ÜYZ) Sorumlu ve Güvenilir Kullanımı Rehberi” çerçevesinde beyan edilmektedir; içeriğin doğruluğundan ve özgünlüğünden proje yürütücüsü ile akademik danışman sorumludur.
 
 ## 6. EKLER
 
