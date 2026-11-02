@@ -92,7 +92,7 @@ Hedefler; mevcut prototip sözleşmeleri, barındırılan bir model için uygula
 - Sistem koşulu: C0, C1, C2.
 - Model: M1 (barındırılan), M2 (açık ağırlıklı, ayrı çıkarım sunucusunda).
 - Önbellek (yalnız C2): açık veya kapalı. Anahtar; NPC kimliği, istemin özeti ve durum sürümüdür; sürüm değiştiyse eski yanıt kullanılmaz.
-- Bağlam uzunluğu (yalnız C2, önbellek kapalı): kısa veya uzun. Kısa bağlam envanter ve görev özeti ile son iki konuşma dönüşünden oluşur; uzun bağlam aynı özete oturumun konuşma dökümünü ekler ve üst sınır koşu günlüğüne yazılır.
+- Bağlam uzunluğu (yalnız C2, önbellek kapalı): kısa veya uzun. Kısa bağlam envanter ve görev özeti ile son iki konuşma dönüşünden oluşur; uzun bağlam aynı özete oturumun konuşma dökümünü ekler ve üst sınır koşu günlüğüne yazılır. Kısa bağlamdaki özet, model çağrısı yapılmadan oyun durumundan sabit bir şablonla kural tabanlı üretilir (envanter listesi, açık ve tamamlanmış görev kimlikleri); böylece özetin kalitesi modele bağlı olmaz ve iki modelde aynıdır.
 - Hata enjeksiyonu (kaydedilmiş girdiye bilerek bozuk yanıt eklenmesi; yalnız S4 ve S5 kabul testleri): yok, bozuk JSON, izin listesinde olmayan eylem, yapay zaman aşımı.
 
 **Bağımlı değişkenler:**
@@ -262,7 +262,7 @@ Bütçe kalemleri TÜBİTAK Yönetim Bilgi Sistemi’nde (TYBS) ayrıca girilir;
 | Toplam | 150 | 450.000 | 81.000 |
 | Kesinti ve yeniden koşu payıyla (×2) | — | 900.000 | 162.000 |
 
-Birim fiyatlar, seçilecek model ve sağlayıcının başvuru öncesindeki güncel fiyatlarıyla yeniden hesaplanmak üzere, üst düzey bir model varsayımıyla milyon girdi tokenı için 500 TL ve milyon çıktı tokenı için 2.000 TL alınmıştır. Düşünme tokenları çıktıyı artırabileceğinden çıktı sayısı dört katına çıkarılmış ve 0,9 × 500 + 0,162 × 4 × 2.000 ≈ 1.746 TL, yani yaklaşık 2.000 TL bulunmuştur. M2 için kiralama süresi 160 saat öngörülmüştür: kurulum ve sürüm denemeleri için 20, İP3’teki entegrasyon ve pilot için 70, İP4’teki koşular ve yeniden koşular için 70 saat. Güncel karşılaştırmalara göre 24 GB belleğe sahip bir GPU’nun bulut liste fiyatı saatte yaklaşık 0,3–0,75 ABD dolarıdır (Ekim 2026 kuru olan yaklaşık 49,4 TL ile 15–37 TL); kur, vergi ve komisyon payıyla saatlik bedel 50 TL alınmış ve 160 saat için 8.000 TL bulunmuştur. Kur ve liste fiyatı değişimi ile kesinti sonrası yeniden koşular için iki kalemin toplamının %20’si, yani 2.000 TL pay eklenmiş ve talep edilen toplam 12.000 TL olarak belirlenmiştir. Kalemler Tablo 6’da gösterilmiştir. Kalemlerin tümü programın destek kapsamındaki hizmet alımı giderleridir; kongre katılımı, yayın, konaklama ve gündelik gideri bütçeye eklenmemiştir ve toplam, programın 12.000 TL üst sınırını aşmaz.
+Birim fiyatlar, seçilecek model ve sağlayıcının başvuru öncesindeki güncel fiyatlarıyla yeniden hesaplanmak üzere, üst düzey bir model varsayımıyla milyon girdi tokenı için 500 TL ve milyon çıktı tokenı için 2.000 TL alınmıştır. Düşünme tokenları çıktıyı artırabileceğinden çıktı sayısı dört katına çıkarılmış ve 0,9 × 500 + 0,162 × 4 × 2.000 ≈ 1.746 TL, yani yaklaşık 2.000 TL bulunmuştur. M2 için kiralama süresi 160 saat öngörülmüştür: kurulum ve sürüm denemeleri için 20, İP3’teki entegrasyon ve pilot için 70, İP4’teki koşular ve yeniden koşular için 70 saat. Güncel karşılaştırmalara göre 24 GB belleğe sahip bir GPU’nun bulut liste fiyatı saatte yaklaşık 0,3–0,75 ABD dolarıdır (Ekim 2026 kuru olan yaklaşık 49,4 TL ile 15–37 TL); kur, vergi ve komisyon payıyla saatlik bedel 50 TL alınmış ve 160 saat için 8.000 TL bulunmuştur. Kur ve liste fiyatı değişimi ile kesinti sonrası yeniden koşular için iki kalemin toplamının %20’si, yani 2.000 TL pay eklenmiş ve talep edilen toplam 12.000 TL olarak belirlenmiştir. Pay aşılırsa ya da kiralama fiyatı belirgin biçimde artarsa, Bölüm 3.2’deki B planı uyarınca M2’nin daha küçük veya nicelenmiş bir sürümü yerel donanımda çalıştırılarak bu kalem düşürülür. Kalemler Tablo 6’da gösterilmiştir. Kalemlerin tümü programın destek kapsamındaki hizmet alımı giderleridir; kongre katılımı, yayın, konaklama ve gündelik gideri bütçeye eklenmemiştir ve toplam, programın 12.000 TL üst sınırını aşmaz.
 
 **Tablo 6.** Talep edilen bütçenin dayanağı.
 
@@ -288,35 +288,35 @@ Bu adresler akademik kaynak değildir; 2 Ekim 2026’da özellik karşılaştır
 
 ## KAYNAKLAR
 
-[1] Mateas, M. ve Stern, A. (2005). Structuring content in the Façade interactive drama architecture. Proceedings of the AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment, 1(1), 93–98. url: https://doi.org/10.1609/aiide.v1i1.18722
+[1] Mateas, M. ve Stern, A. (2005). Structuring content in the Façade interactive drama architecture. Proceedings of the AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment, 1(1), 93–98. https://doi.org/10.1609/aiide.v1i1.18722
 
-[2] Riedl, M. O. ve Bulitko, V. (2013). Interactive narrative: An intelligent systems approach. AI Magazine, 34(1), 67–77. url: https://doi.org/10.1609/aimag.v34i1.2449
+[2] Riedl, M. O. ve Bulitko, V. (2013). Interactive narrative: An intelligent systems approach. AI Magazine, 34(1), 67–77. https://doi.org/10.1609/aimag.v34i1.2449
 
-[3] Doran, J. ve Parberry, I. (2011). A prototype quest generator based on a structural analysis of quests from four MMORPGs. Proceedings of the 2nd International Workshop on Procedural Content Generation in Games (ss. 1–8). ACM. url: https://doi.org/10.1145/2000919.2000920
+[3] Doran, J. ve Parberry, I. (2011). A prototype quest generator based on a structural analysis of quests from four MMORPGs. Proceedings of the 2nd International Workshop on Procedural Content Generation in Games (ss. 1–8). ACM. https://doi.org/10.1145/2000919.2000920
 
-[4] Gallotta, R., Todd, G., Zammit, M., Earle, S., Liapis, A., Togelius, J. ve Yannakakis, G. N. (2024). Large language models and games: A survey and roadmap. IEEE Transactions on Games. Erken görünüm. url: https://doi.org/10.1109/TG.2024.3461510
+[4] Gallotta, R., Todd, G., Zammit, M., Earle, S., Liapis, A., Togelius, J. ve Yannakakis, G. N. (2024). Large language models and games: A survey and roadmap. IEEE Transactions on Games. Erken görünüm. https://doi.org/10.1109/TG.2024.3461510
 
-[5] Park, J. S., O’Brien, J. C., Cai, C. J., Morris, M. R., Liang, P. ve Bernstein, M. S. (2023). Generative agents: Interactive simulacra of human behavior. Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology (ss. 1–22). ACM. url: https://doi.org/10.1145/3586183.3606763
+[5] Park, J. S., O’Brien, J. C., Cai, C. J., Morris, M. R., Liang, P. ve Bernstein, M. S. (2023). Generative agents: Interactive simulacra of human behavior. Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology (ss. 1–22). ACM. https://doi.org/10.1145/3586183.3606763
 
-[6] Packer, C., Wooders, S., Lin, K., Fang, V., Patil, S. G., Stoica, I. ve Gonzalez, J. E. (2023). MemGPT: Towards LLMs as operating systems (arXiv:2310.08560). arXiv. url: https://doi.org/10.48550/arXiv.2310.08560
+[6] Packer, C., Wooders, S., Lin, K., Fang, V., Patil, S. G., Stoica, I. ve Gonzalez, J. E. (2023). MemGPT: Towards LLMs as operating systems (arXiv:2310.08560). arXiv. https://doi.org/10.48550/arXiv.2310.08560
 
 [7] Wang, G., Xie, Y., Jiang, Y., Mandlekar, A., Xiao, C., Zhu, Y., Fan, L. ve Anandkumar, A. (2024). Voyager: An open-ended embodied agent with large language models. Transactions on Machine Learning Research. url: https://openreview.net/forum?id=nfx5IutEed
 
-[8] Ashby, T., Webb, B. K., Knapp, G., Searle, J. ve Fulda, N. (2023). Personalized quest and dialogue generation in role-playing games: A knowledge graph- and language model-based approach. Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems (ss. 1–20). ACM. url: https://doi.org/10.1145/3544548.3581441
+[8] Ashby, T., Webb, B. K., Knapp, G., Searle, J. ve Fulda, N. (2023). Personalized quest and dialogue generation in role-playing games: A knowledge graph- and language model-based approach. Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems (ss. 1–20). ACM. https://doi.org/10.1145/3544548.3581441
 
-[9] Värtinen, S., Hämäläinen, P. ve Guckelsberger, C. (2024). Generating role-playing game quests with GPT language models. IEEE Transactions on Games, 16(1), 127–139. url: https://doi.org/10.1109/TG.2022.3228480
+[9] Värtinen, S., Hämäläinen, P. ve Guckelsberger, C. (2024). Generating role-playing game quests with GPT language models. IEEE Transactions on Games, 16(1), 127–139. https://doi.org/10.1109/TG.2022.3228480
 
-[10] Maslych, M., Katebi, M., Lee, C., Hmaiti, Y., Ghasemaghaei, A., Pumarada, C., Palmer, J., Segarra Martinez, E., Emporio, M., Snipes, W., McMahan, R. P. ve LaViola, J. J., Jr. (2025). Mitigating response delays in free-form conversations with LLM-powered intelligent virtual agents. Proceedings of the 7th ACM Conference on Conversational User Interfaces (ss. 1–15). ACM. url: https://doi.org/10.1145/3719160.3736636
+[10] Maslych, M., Katebi, M., Lee, C., Hmaiti, Y., Ghasemaghaei, A., Pumarada, C., Palmer, J., Segarra Martinez, E., Emporio, M., Snipes, W., McMahan, R. P. ve LaViola, J. J., Jr. (2025). Mitigating response delays in free-form conversations with LLM-powered intelligent virtual agents. Proceedings of the 7th ACM Conference on Conversational User Interfaces (ss. 1–15). ACM. https://doi.org/10.1145/3719160.3736636
 
 [11] McGrath, J., Lorandi, M. ve Belz, A. (2025). Echoes of Others: Real-time LLM dialogue generation for immersive NPC interaction. Proceedings of the 18th International Natural Language Generation Conference: System Demonstrations (ss. 1–2). Association for Computational Linguistics. url: https://aclanthology.org/2025.inlg-demos.1/
 
-[12] Ji, Z., Lee, N., Frieske, R., Yu, T., Su, D., Xu, Y., Ishii, E., Bang, Y. J., Madotto, A. ve Fung, P. (2023). Survey of hallucination in natural language generation. ACM Computing Surveys, 55(12), Makale 248. url: https://doi.org/10.1145/3571730
+[12] Ji, Z., Lee, N., Frieske, R., Yu, T., Su, D., Xu, Y., Ishii, E., Bang, Y. J., Madotto, A. ve Fung, P. (2023). Survey of hallucination in natural language generation. ACM Computing Surveys, 55(12), Makale 248. https://doi.org/10.1145/3571730
 
-[13] Willard, B. T. ve Louf, R. (2023). Efficient guided generation for large language models (arXiv:2307.09702). arXiv. url: https://doi.org/10.48550/arXiv.2307.09702
+[13] Willard, B. T. ve Louf, R. (2023). Efficient guided generation for large language models (arXiv:2307.09702). arXiv. https://doi.org/10.48550/arXiv.2307.09702
 
 [14] Chen, L., Zaharia, M. ve Zou, J. (2024). FrugalGPT: How to use large language models while reducing cost and improving performance. Transactions on Machine Learning Research. url: https://openreview.net/forum?id=cSimKw5p6R
 
-[15] Kumaran, V., Rowe, J., Mott, B. ve Lester, J. (2023). SceneCraft: Automating interactive narrative scene generation in digital games with large language models. Proceedings of the AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment, 19(1), 86–96. url: https://doi.org/10.1609/aiide.v19i1.27504
+[15] Kumaran, V., Rowe, J., Mott, B. ve Lester, J. (2023). SceneCraft: Automating interactive narrative scene generation in digital games with large language models. Proceedings of the AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment, 19(1), 86–96. https://doi.org/10.1609/aiide.v19i1.27504
 
 [16] T.C. Cumhurbaşkanlığı Strateji ve Bütçe Başkanlığı. (2023). On İkinci Kalkınma Planı (2024–2028) (Türkiye Büyük Millet Meclisi Karar No. 1396; Resmî Gazete, 1 Kasım 2023, Mükerrer Sayı 32356). Son erişim tarihi: 30 Ekim 2026, url: https://www.sbb.gov.tr/wp-content/uploads/2023/12/On-Ikinci-Kalkinma-Plani_2024-2028_11122023.pdf
 
