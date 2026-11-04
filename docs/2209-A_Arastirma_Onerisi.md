@@ -6,7 +6,7 @@ Başvuru Sahibinin Adı Soyadı: Muhammet Furkan BİLİCİ
 
 Araştırma Önerisinin Başlığı: Büyük Dil Modeli Destekli Oyuncu Olmayan Karakter (Non-Player Character, NPC) Eylemlerinin Oyun Kurallarına Göre Doğrulanması
 
-Danışmanın Adı Soyadı: Arş. Gör. Dr. Hakan AYDIN
+Danışmanın Adı Soyadı: Arş. Gör. Mustafa TOPSAKAL
 
 Araştırmanın Yürütüleceği Kurum/Kuruluş: Karadeniz Teknik Üniversitesi
 
